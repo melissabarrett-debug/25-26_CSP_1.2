@@ -20,6 +20,7 @@ meowl.shape("circle")
 meowl.color(spot_color)
 meowl.shapesize(3)
 box_turtle.penup()
+meowl.penup()
 
 #-----game functions--------
 #draw the box for the score
@@ -50,10 +51,14 @@ def change_position():
     update_score()
 
 def update_score():
+    #include global score
     global score
+    #increment the score by 1
     score+=1
     score_writer.clear()
+    #print the current score
     score_writer.write(score, font=font_setup)
+
 #-----events----------------
 meowl.onclick(spot_clicked)
 
